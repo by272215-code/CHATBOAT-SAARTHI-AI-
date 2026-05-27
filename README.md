@@ -23,20 +23,27 @@ Saarthi AI is capable of understanding and responding to questions across multip
 ### Example Interaction
 
 You: What is CPU in short answer
+
 Saarthi AI: The CPU (Central Processing Unit) is the brain of a computer, responsible for executing instructions and managing system operations.
 
 You: Artificial intelligence kya hai in short answer
+
 Saarthi AI: Artificial Intelligence (AI) ek aisi technology hai jo machines ko seekhne, sochne aur problems solve karne ki capability deti hai.
 
 You: Bhojpuri me ek chutkula suna chhota sa
+
 Saarthi AI: बिलकुल! एक छोटा सा भोजपुरी चुटकुला हाजिर बा:
+
 **पत्नी:** रोज-रोज एके गो सब्जी खा के ना बोर हो गइला?
+
 **पति:** बोर सब्जी से ना, बोर हम रोज-रोज खाए से हो गइल बानी!
 ---
 *(Wife: Aren't you bored eating the same vegetable every day?)*
+
 *(Husband: I'm not bored of the vegetable, I'm bored of eating every day!)*
 
 You: Ka haal ba
+
 Saarthi AI: Ham theek baani! Rauaa kaisan baani?
 
 ### Why Saarthi AI?
