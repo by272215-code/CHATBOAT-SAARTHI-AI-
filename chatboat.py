@@ -1,6 +1,6 @@
 import google.generativeai as genai
 BOT_NAME = "Saarthi AI"
-genai.configure(api_key="AIzaSyCjSnzSruj1CWmzeNgWnxF_C1oTg7Ms9R4")
+genai.configure(api_key="HIDDEN API KEY ,  I Am Not Share API Key Because Its Privet")
 model = genai.GenerativeModel("gemini-2.5-flash")
 while True:
     question = input("You: ")
