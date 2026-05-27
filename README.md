@@ -1,4 +1,5 @@
-# CHATBOAT-SAARTHI-AI-
+ <img width="500" height="500" alt="72eafcef-c61c-4c25-b68b-07563e352749-removebg-preview" src="https://github.com/user-attachments/assets/51627dcd-2f85-4544-93af-63794794e1d6" />
+# CHATBOAT-SAARTHI-AI- 
 Yeh mera AI Chatbot project hai jo Python aur Gemini API ka use karke banaya gaya hai. User jo bhi question poochta hai, chatbot uska jawab real time me generate karta hai. Is project me VS Code ka use karke code likha gaya hai aur output terminal me dikhaya jata hai.
 
 
