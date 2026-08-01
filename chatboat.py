@@ -1,10 +1,13 @@
+import os
 import google.generativeai as genai
-BOT_NAME = "Saarthi AI"
-genai.configure(api_key="HIDDEN API KEY ,  I Am Not Share API Key Because Its Privet")
+from dotenv import load_dotenv
+
+load_dotenv()
+
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
+
 model = genai.GenerativeModel("gemini-2.5-flash")
-while True:
-    question = input("You: ")
-    if question.lower() == "exit":
-        break
+
+def ask_saarthi(question):
     response = model.generate_content(question)
-    print(f"{BOT_NAME}: {response.text}")
+    return response.text
