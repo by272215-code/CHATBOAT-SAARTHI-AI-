@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saarthi AI</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Browser Tab Logo -->
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <img src="{{ url_for('static', filename='images/logo.png') }}"
+                 alt="Saarthi AI Logo"
+                 class="logo">
+
+            <h1>Saarthi AI</h1>
+
+        </div>
+
+      <div id="chat-box">
+
+    <div class="bot">
+
+        <span>
+            👋 Welcome to <b>Saarthi AI</b><br><br>
+
+            I can help you with:
+            <br>📚 Study
+            <br>💻 Programming
+            <br>🤖 AI & Machine Learning
+            <br>📝 Projects
+            <br>🎓 Career Guidance
+
+        </span>
+
+    </div>
+
+</div>
+
+        <div class="input-area">
+
+            <input
+                type="text"
+                id="message"
+                placeholder="Ask anything...">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+            <button onclick="startVoice()">
+🎤
+</button>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <input type="file" id="imageUpload" accept="image/*">
+
+</body>
+
+</html>
