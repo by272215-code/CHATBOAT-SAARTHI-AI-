@@ -1,0 +1,9 @@
+<div class="header">
+
+    <img src="{{ url_for('static', filename='image/logo.png') }}"
+         alt="Saarthi AI Logo"
+         class="logo">
+
+    <h1>Saarthi AI</h1>
+
+</div>
