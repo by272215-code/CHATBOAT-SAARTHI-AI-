@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
     <!-- Browser Tab Logo -->
-    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <link rel="icon" href="{{ url_for('static', filename='image/logo.png') }}">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 
         <div class="header">
 
-            <img src="{{ url_for('static', filename='images/logo.png') }}"
+            <img src="{{ url_for('static', filename='image/logo.png') }}"
                  alt="Saarthi AI Logo"
                  class="logo">
 
@@ -58,6 +58,7 @@
             <button onclick="sendMessage()">
                 Send
             </button>
+            
             <button onclick="startVoice()">
 🎤
 </button>
