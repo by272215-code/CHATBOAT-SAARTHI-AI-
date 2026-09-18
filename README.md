@@ -3,9 +3,6 @@
 
 
 # CHATBOAT-SAARTHI-AI- 
-Yeh mera AI Chatbot project hai jo Python aur Gemini API ka use karke banaya gaya hai. User jo bhi question poochta hai, chatbot uska jawab real time me generate karta hai. Is project me VS Code ka use karke code likha gaya hai aur output terminal me dikhaya jata hai.
-
-
 
 🚀 Saarthi AI is an intelligent chatbot built using Python and Google's Gemini AI model. Designed for speed, simplicity, and real-time conversations, it provides accurate and human-like responses directly from the command line. This project demonstrates the integration of Generative AI into practical applications and serves as a foundation for building advanced AI assistants.
 
