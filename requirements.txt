@@ -1,4 +1,5 @@
 Flask
-gunicorn
-google-generativeai
+google-genai
 python-dotenv
+Pillow
+reportlab
