@@ -2,73 +2,377 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Saarthi AI</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    <!-- Browser Tab Logo -->
-    <link rel="icon" href="{{ url_for('static', filename='image/logo.png') }}">
+    <!-- ==============================
+         WEBSITE ICON
+    =============================== -->
+
+    <link rel="icon"
+          href="{{ url_for('static', filename='image/logo.png') }}">
+
+
+    <!-- ==============================
+         CSS
+    =============================== -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
 </head>
+
 
 <body>
 
-    <div class="container">
 
-        <div class="header">
+<!-- =========================================
+     MAIN APP
+========================================= -->
 
-            <img src="{{ url_for('static', filename='image/logo.png') }}"
-                 alt="Saarthi AI Logo"
-                 class="logo">
+<div class="app">
 
-            <h1>Saarthi AI</h1>
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- NEW CHAT -->
+
+        <div class="sidebar-top">
+
+            <button
+                type="button"
+                class="new-chat-btn"
+                onclick="newChat()">
+
+                <span>＋</span>
+                <span>New Chat</span>
+
+            </button>
 
         </div>
 
-      <div id="chat-box">
 
-    <div class="bot">
 
-        <span>
-            👋 Welcome to <b>Saarthi AI</b><br><br>
+        <!-- HISTORY TITLE -->
 
-            I can help you with:
-            <br>📚 Study
-            <br>💻 Programming
-            <br>🤖 AI & Machine Learning
-            <br>📝 Projects
-            <br>🎓 Career Guidance
+        <div class="history-heading">
 
-        </span>
+            <span>Chat History</span>
 
-    </div>
+        </div>
 
-</div>
+
+
+        <!-- HISTORY LIST -->
+
+        <div
+            id="history-list"
+            class="history-list">
+
+            <!-- History will be added by JavaScript -->
+
+        </div>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                type="button"
+                onclick="clearHistory()">
+
+                🗑 Clear History
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main">
+
+
+        <!-- =================================
+             HEADER
+        ================================== -->
+
+        <header class="header">
+
+
+            <div class="brand">
+
+
+                <!-- LOGO -->
+
+                <img
+                    src="{{ url_for('static', filename='image/logo.png') }}"
+                    alt="Saarthi AI Logo"
+                    class="logo"
+                >
+
+
+                <!-- BRAND NAME -->
+
+                <div class="brand-info">
+
+                    <h1>Saarthi AI</h1>
+
+                    <p>
+                        YOUR INTELLIGENT GUIDE
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =================================
+             CHAT AREA
+        ================================== -->
+
+        <section
+            id="chat-box"
+            class="chat-box">
+
+
+            <!-- =================================
+                 WELCOME MESSAGE
+            ================================== -->
+
+            <div class="message bot">
+
+
+                <div class="bot-content">
+
+
+                    <p class="welcome">
+
+                        👋 Welcome to
+                        <strong>Saarthi AI</strong>
+
+                    </p>
+
+
+                    <p>
+
+                        I can help you with:
+
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            📚 Study & Learning
+                        </li>
+
+                        <li>
+                            💻 Programming
+                        </li>
+
+                        <li>
+                            🤖 AI & Machine Learning
+                        </li>
+
+                        <li>
+                            📝 Projects
+                        </li>
+
+                        <li>
+                            🎓 Career Guidance
+                        </li>
+
+                        <li>
+                            📄 PDF Creation
+                        </li>
+
+                        <li>
+                            🔀 Flowchart Generation
+                        </li>
+
+                        <li>
+                            🖼 Image Generation
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             IMAGE PREVIEW
+        ================================== -->
+
+        <div
+            id="image-preview"
+            class="image-preview">
+
+        </div>
+
+
+
+        <!-- =================================
+             INPUT AREA
+        ================================== -->
 
         <div class="input-area">
+
+
+            <!-- MESSAGE INPUT -->
 
             <input
                 type="text"
                 id="message"
-                placeholder="Ask anything...">
+                placeholder="Ask anything..."
+                autocomplete="off"
+            >
 
-            <button onclick="sendMessage()">
+
+
+            <!-- SEND -->
+
+            <button
+                type="button"
+                class="send-btn"
+                onclick="sendMessage()">
+
                 Send
+
             </button>
-            
-            <button onclick="startVoice()">
-🎤
-</button>
+
+
+
+            <!-- VOICE -->
+
+            <button
+                type="button"
+                class="voice-btn"
+                onclick="startVoice()"
+                title="Voice Input">
+
+                🎤
+
+            </button>
+
 
         </div>
 
-    </div>
-      <input type="file" id="imageUpload" accept="image/*">
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
-   
+
+
+        <!-- =================================
+             AI TOOLS
+        ================================== -->
+
+        <div class="tools">
+
+
+            <!-- IMAGE UPLOAD -->
+
+            <label
+                for="imageUpload"
+                class="tool-btn">
+
+                📷 Image
+
+            </label>
+
+
+            <input
+                type="file"
+                id="imageUpload"
+                accept="image/*"
+            >
+
+
+
+            <!-- PDF -->
+
+            <button
+                type="button"
+                class="tool-btn"
+                onclick="generatePDF()">
+
+                📄 PDF
+
+            </button>
+
+
+
+            <!-- FLOWCHART -->
+
+            <button
+                type="button"
+                class="tool-btn"
+                onclick="generateFlowchart()">
+
+                🔀 Flowchart
+
+            </button>
+
+
+
+            <!-- IMAGE GENERATION -->
+
+            <button
+                type="button"
+                class="tool-btn"
+                onclick="generateImage()">
+
+                🖼 Generate Image
+
+            </button>
+
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT code
+========================================= -->
+
+<script
+    src="{{ url_for('static', filename='script.js') }}">
+</script>
+
 
 </body>
 
